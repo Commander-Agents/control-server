@@ -1,0 +1,43 @@
+name: commander
+services:
+    eclipse-mosquitto:
+        image: eclipse-mosquitto:latest
+        container_name: commander-mqtt
+        volumes:
+            - ./mqtt/config:/mosquitto/config:rw # WARNING: Remember to generate password for MQTT ! View README
+            - ./mqtt/data:/mosquitto/data:rw
+            - ./mqtt/log:/mosquitto/log:rw
+        ports:
+            - 1883:1883
+            - 9001:9001
+        stdin_open: true
+        tty: true
+        environment:
+            - DOCKER_HOST=unix:///var/run/docker.sock
+
+    # hivemq:
+    #     image: hivemq/hivemq-ce:latest
+    #     container_name: commander-hivemq
+    #     ports:
+    #         - "1883:1883"         # Port MQTT standard
+    #         - "8080:8080"         # Dashboard HiveMQ (Web UI)
+    #         - "8883:8883"         # Port MQTT sécurisé (TLS/SSL)
+    #     volumes:
+    #         - ./hivemq/data:/opt/hivemq/data       # Données persistantes
+    #         - ./hivemq/config:/opt/hivemq/conf     # Configuration (ex: authentification DB)
+    #     environment:
+    #         HIVEMQ_LICENSE: accept                 # Accepter la licence
+    #         HIVEMQ_DATA_FOLDER: /opt/hivemq/data   # Répertoire des données
+    #         HIVEMQ_CONFIG_FOLDER: /opt/hivemq/conf # Répertoire de configuration
+
+    redis:
+        image: redis:alpine
+        container_name: commander-redis
+        ports:
+            - 6379:6379
+        volumes:
+            - redis-data:/data
+        command: ["redis-server", "--appendonly", "yes", "--requirepass", "redis_secret_password_Agd519846z51fdsz"] # Active l'append-only pour persistance
+
+volumes:
+    redis-data:
