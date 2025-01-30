@@ -5,7 +5,7 @@ Yes I know, Ansible is supposed to be agent-less. But if you've ever tried to in
 
 So here is Commander-Agents !  
 
-It allows you to run lightweight agents on your hosts (Windows or Linux) and run commands from your server !
+It allows you to run [lightweight agents (available here)](https://github.com/Commander-Agents/commander-agent) on your hosts (Windows or Linux) and run commands from your server !
 
 *Note: The project is currently in progress, not all features are available and the design is not finished*
 
@@ -17,7 +17,8 @@ It allows you to run lightweight agents on your hosts (Windows or Linux) and run
 
 # Project setup
 
-Modify the `APP_ENV=local` as `APP_ENV=production` in production.
+Run `cp .env.example .env` to have a fresh `.env` file for Laravel.  
+Then modify the `APP_ENV=local` as `APP_ENV=production` in production.
 
 Don't forget to configure the database connection in `.env` with your database credentials :
 ```bash
