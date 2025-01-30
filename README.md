@@ -1,3 +1,20 @@
+# What is it ?
+
+This projects allows you to run an "Ansible agents management platform".  
+Yes I know, Ansible is supposed to be agent-less. But if you've ever tried to install Ansible on more than 10 Windows hosts, you know how shitty this is on Windows.  
+
+So here is Commander-Agents !  
+
+It allows you to run lightweight agents on your hosts (Windows or Linux) and run commands from your server !
+
+*Note: The project is currently in progress, not all features are available and the design is not finished*
+
+## Screenshots
+![image](https://github.com/user-attachments/assets/0fd53a34-4175-43ef-abdc-a40f20ac90f5)  
+![image](https://github.com/user-attachments/assets/be4e681b-6e61-4dd7-a1d2-a3a4d5e10f0c)  
+![image](https://github.com/user-attachments/assets/20d0048a-8f76-4483-b604-73c02270f27d)
+
+
 # Project setup
 
 Modify the `APP_ENV=local` as `APP_ENV=production` in production.
