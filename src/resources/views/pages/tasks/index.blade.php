@@ -1,4 +1,6 @@
 <x-app-layout>
+    @section('title') - Tasks @endsection
+
     <div class="container mx-auto p-6">
         <span class="flex justify-between">
             <h1 class="text-2xl font-bold mb-4">Tasks list</h1>

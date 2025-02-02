@@ -70,6 +70,8 @@ new #[Layout('layouts.guest')] class extends Component
 }; ?>
 
 <div>
+    @section('title') - Password reset @endsection
+
     <form wire:submit="resetPassword">
         <!-- Email Address -->
         <div>
