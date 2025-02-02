@@ -12,7 +12,9 @@ It allows you to run [lightweight agents (available here)](https://github.com/Co
 ## Screenshots
 ![image](https://github.com/user-attachments/assets/0fd53a34-4175-43ef-abdc-a40f20ac90f5)  
 ![image](https://github.com/user-attachments/assets/be4e681b-6e61-4dd7-a1d2-a3a4d5e10f0c)  
-![image](https://github.com/user-attachments/assets/20d0048a-8f76-4483-b604-73c02270f27d)
+![image](https://github.com/user-attachments/assets/20d0048a-8f76-4483-b604-73c02270f27d)  
+![image](https://github.com/user-attachments/assets/cf870a12-7ec7-4a04-87ff-d8b560323633)
+
 
 
 # Project setup
