@@ -16,6 +16,7 @@ Route::middleware('auth')->group(function () {
 
     Route::prefix('tasks')->group(function () {
         Route::view('/', 'pages.tasks.index')->name('tasks.index');
+        Route::view('/{taskAgentId}', 'pages.tasks.results')->name('tasks.results');
     });
 });
 

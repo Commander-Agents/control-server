@@ -9,6 +9,7 @@
                 <th class="py-3 px-6 text-left">Command</th>
                 <th class="py-3 px-6 text-left">Status</th>
                 <th class="py-3 px-6 text-left">Updated at</th>
+                <th class="py-3 px-6 text-center">Actions</th>
             </tr>
         </thead>
         <tbody class="text-gray-600 text-sm font-light" wire:poll.5s>
@@ -50,6 +51,13 @@
                               @mousemove="tooltipX = $event.clientX; tooltipY = $event.clientY">
                             {{ $task->updated_at ? $task->updated_at->diffForHumans() : 'N/A' }}
                         </span>
+                    </td>
+                    <td class="py-3 px-6 text-center">
+                        <a href="{{ route('tasks.results', ['taskAgentId' => $task->uid]) }}">
+                            <button class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600">
+                                View logs
+                            </button>
+                        </a>
                     </td>
                 </tr>
             @endforeach

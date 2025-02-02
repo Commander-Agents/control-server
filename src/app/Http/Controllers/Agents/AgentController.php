@@ -7,7 +7,6 @@ use App\Models\TaskAgent;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Crypt;
-use Illuminate\Support\Facades\DB;
 use \Str;
 use phpseclib3\Crypt\PublicKeyLoader;
 use App\Models\Agent;
